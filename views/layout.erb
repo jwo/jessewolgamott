@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jesse Wolgamott</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> 
+<link href="styles/style.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]><link href="styles/ie6-7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<script type="text/javascript" src="scripts/cufon-yui.js"></script>
+<script type="text/javascript" src="scripts/Arial_400.font.js"></script>
+
+<script type="text/javascript">
+	Cufon.replace('h2');
+	Cufon.replace('h3');
+</script>
+</head>
+
+<body>
+    <div id="nav">
+        <ul>
+        <%
+        	path_without_slash = request.path_info
+        	path_without_slash.slice!(0)
+        	[ "home", "profile", "my-next-company", "next-steps", "resume", "statistics", "campaigns" ].each do |route| %>
+        	<%=nav_active(route, path_without_slash)%>
+        	<%
+        	end
+        %>
+        </ul>
+    </div>
+    
+    
+    <div id="wrapper">
+        <div id="sidebar">
+            <div>
+            	<br/>
+            	<a href="/"><img src="images/jesse_wolgamott.jpg" border="0" align="right" alt="Mad Men Cartoon of Jesse Wolgamott" /></a>
+            </div>
+            <br clear="all"/>
+            
+           <h4 title="How to learn about me" style="margin-top:20px">How to learn about me</h4>
+                    <ul>
+                        <li>jesse.wolgamott [at] gmail</li>
+                        <li><a href="http://www.linkedin.com/in/jessewolgamott">www.linkedin.com/in/jessewolgamott</a></li>
+                        <li><strong>(713) 234-0361</strong></li>
+                    </ul>
+                    <br/>
+                 <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=42e9a5fa-89ef-479f-948c-6c35b0724d15&amp;type=website&amp;style=rotate&amp;post_services=email%2Cfacebook%2Ctwitter%2Cdigg%2Csms%2Cdelicious%2Cstumbleupon%2Creddit%2Cgoogle_bmarks%2Clinkedin%2Cbebo%2Cybuzz%2Cblogger%2Cyahoo_bmarks%2Cmixx%2Ctechnorati%2Cfriendfeed%2Cpropeller%2Cwordpress%2Cnewsvine%2Cxanga&amp;headerTitle=Let%20People%20Know"></script>
+                 
+
+        </div>
+        
+        <div id="content-wrapper">
+
+            <br/>
+            <div id="main-content" class="clearfix">
+            <%= yield %>
+            </div>
+            </div>
+            
+            <div id="footer-holder" style="padding-top:70px">
+            <div id="footer" >
+            	<p class="left">Copyright &copy; 2009 <a href="/">Jesse Wolgamott</a></p>
+                <p class="right">Meta (code and design): <a href="/meta">Meta </a></p>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript"> Cufon.now(); </script>
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2397417-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
