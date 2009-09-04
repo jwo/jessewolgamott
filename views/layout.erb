@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Jesse Wolgamott</title>
+<%
+  path_without_slash = request.path_info
+  path_without_slash.slice!(0)
+%>
+<title><%= "#{path_without_slash.capitalize} | " if request.path_info != ""%>Jesse Wolgamott</title>
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> 
 <link href="styles/style.css" rel="stylesheet" type="text/css" />
 <!--[if lt IE 8]><link href="styles/ie6-7.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -10,6 +14,7 @@
 <script type="text/javascript" src="scripts/Arial_400.font.js"></script>
 
 <script type="text/javascript">
+	Cufon.replace('h1');
 	Cufon.replace('h2');
 	Cufon.replace('h3');
 </script>
@@ -19,13 +24,9 @@
     <div id="nav">
         <ul>
         <%
-        	path_without_slash = request.path_info
-        	path_without_slash.slice!(0)
         	[ "home", "profile", "my-next-company", "next-steps", "resume", "statistics", "campaigns" ].each do |route| %>
         	<%=nav_active(route, path_without_slash)%>
-        	<%
-        	end
-        %>
+        	<%end%>
         </ul>
     </div>
     

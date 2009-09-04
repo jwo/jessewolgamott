@@ -57,13 +57,15 @@ body									{ font:normal 13px/20px Arial, Helvetica, sans-serif; color:#573404
 
 #wrapper								{ width:710px; margin:0 auto; overflow:hidden; padding-left:250px; position:relative; }
 #sidebar								{ width:210px; float:left; margin-left:-250px; }
-h1										{ background:url(../images/logo.png) no-repeat right top; margin-bottom:10px; }
+/*h1										{ background:url(../images/logo.png) no-repeat right top; margin-bottom:10px; }
 h1 a									{ display:block; height:51px; text-indent:-9999px; }
+*/
 #sidebar address						{ font:normal 11px/16px tahoma, arial, sans-serif; color:#ED384B; border-top:1px dotted #AA987D; border-bottom:1px dotted #AA987D; padding:2px 0; text-align:center; text-align:right; }
 
 #content-wrapper						{ width:710px; overflow:hidden; }
-h2										{ font:normal 56px/52px "museo 300", "trebuchet MS", arial, sans-serif; color:#51AFCE; margin-bottom:10px; }
-h2 em									{ color:#ED384B; font-style:normal; }
+
+h1, h2										{ font:normal 56px/52px "museo 300", "trebuchet MS", arial, sans-serif; color:#51AFCE; margin-bottom:10px; }
+h1 em, h2 em									{ color:#ED384B; font-style:normal; }
 h3										{ font:normal 21px/32px "museo 300", "trebuchet MS", arial, sans-serif; color:#573404; margin-bottom:20px; }
 h3 a									{ display:-moz-inline-block; display:inline-block; background:#ED384B; color:#FFF; text-decoration:none; padding:0 10px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -webkit-transition: background 0.25s ease-in; }
 h3 a:hover								{ background:#51AFCE; color:#FFF; }
