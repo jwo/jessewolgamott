@@ -7,7 +7,7 @@
   path_without_slash.slice!(0)
 %>
 <title><%= "#{path_without_slash.capitalize} | " if request.path_info != ""%>Jesse Wolgamott</title>
-<% if path_without_slash == ''%><meta name="description">Jesse Wolgamott is smart, gets things done, and wants to hire his next company.</meta><% end %>
+<% if path_without_slash == ''%><meta name="description" content="Jesse Wolgamott is smart, gets things done, and wants to hire his next company."/><% end %>
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> 
 <link href="styles/style.css" rel="stylesheet" type="text/css" />
 <!--[if lt IE 8]><link href="styles/ie6-7.css" rel="stylesheet" type="text/css" /><![endif]-->
