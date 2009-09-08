@@ -8,7 +8,7 @@ require 'rack/test'
 
 set :environment, :test
 
-class HelloWorldTest < Test::Unit::TestCase
+class JesseWolgamottTest < Test::Unit::TestCase
   include Rack::Test::Methods
 
   def app
@@ -43,6 +43,18 @@ class HelloWorldTest < Test::Unit::TestCase
     route = "resume"
   	current_path = "resume"
   	assert_equal lib_nav_active(route, current_path), "<li><a href=\"resume\" class=\"active\">resume</a></li>"
+  end
+  
+  def test_homepage_has_meta_tag
+  	get '/'
+    assert last_response.ok?
+    assert last_response.body.include?('<meta name="description"')
+  end
+  
+  def test_profile_page_does_not_have_meta_tag
+  	get '/profile'
+    assert last_response.ok?
+    assert !last_response.body.include?('<meta name="description"')
   end
 end
   
