@@ -24,7 +24,7 @@ class HelloWorldTest < Test::Unit::TestCase
   def test_resume_page_shows
     get '/resume'
     assert last_response.ok?
-    assert last_response.body.include?('My Resume')
+    assert last_response.body.include?('My <em>Resume</em>')
   end
 
   def test_homepage_sets_home_navigation_active
